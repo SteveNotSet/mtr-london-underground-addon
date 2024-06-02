@@ -2,10 +2,12 @@
 	"schemaVersion": 1,
 	"id": "londonunderground",
 	"version": "${version}",
-	"name": "MTR London Underground Addon",
-	"description": "A London Underground Addon for the Minecraft Transit Railway Mod",
+	"name": "MTR London Underground Addon for Xinghai City",
+	"description": "A London Underground Addon for the Minecraft Transit Railway Mod, modified by SteveNotSet for Xinghai City",
 	"authors": [
-		"John Doe"
+		"Chris Herbert",
+		"Benjamin Wyatt",
+		"SteveNotSet"
 	],
 	"license": "MIT",
 	"icon": "icon.png",
