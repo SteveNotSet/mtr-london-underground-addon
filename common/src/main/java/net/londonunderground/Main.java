@@ -116,7 +116,6 @@ public class Main {
 		registerBlockItem.accept("sign_trams", MyBlocks.SIGN_TRAMS, MyItems.TFL_SIGNS);
 		registerBlockItem.accept("sign_poppy", MyBlocks.SIGN_POPPY, MyItems.TFL_SIGNS);
 		registerBlockItem.accept("sign_metro", MyBlocks.SIGN_METRO, MyItems.TFL_SIGNS);
-		registerBlockItem.accept("sign_pride", MyBlocks.SIGN_PRIDE, MyItems.TFL_SIGNS);
 
 
 		registerBlockItem.accept("morden_stairs", MyBlocks.MORDEN_STAIRS, MyItems.TFL_BLOCKS);
@@ -206,7 +205,6 @@ public class Main {
 		registerBlockEntityType.accept("sign_poppy", MyBlockEntityTypes.SIGN_POPPY_TILE_ENTITY);
 		registerBlockEntityType.accept("sign_metro", MyBlockEntityTypes.SIGN_METRO_TILE_ENTITY);
 		registerBlockEntityType.accept("sign_underground", MyBlockEntityTypes.SIGN_UNDERGROUND_TILE_ENTITY);
-		registerBlockEntityType.accept("sign_pride", MyBlockEntityTypes.SIGN_PRIDE_TILE_ENTITY);
 
 		registerBlockEntityType.accept("tunnel_darkness", MyBlockEntityTypes.DARK_TILE);
 		registerBlockEntityType.accept("pids_northern", MyBlockEntityTypes.PIDS_NORTHERN_TILE_ENTITY);

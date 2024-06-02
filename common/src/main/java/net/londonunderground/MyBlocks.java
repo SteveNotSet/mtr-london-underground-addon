@@ -104,7 +104,6 @@ public interface MyBlocks {
 	RegistryObject<Block> SIGN_METRO =new RegistryObject<>(()-> new SignMetro(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.QUARTZ).strength(2).noOcclusion()));
 	RegistryObject<Block> SIGN_LIZZY =new RegistryObject<>(()-> new SignLizzy(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.QUARTZ).strength(2).noOcclusion()));
 	RegistryObject<Block> SIGN_UNDERGROUND =new RegistryObject<>(()-> new SignUnderground(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.QUARTZ).strength(2).noOcclusion()));
-	RegistryObject<Block> SIGN_PRIDE =new RegistryObject<>(()-> new SignPride(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.QUARTZ).strength(2).noOcclusion()));
 
 	RegistryObject<Block> LU_POLE =new RegistryObject<>(()-> new BlockLUPole(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.QUARTZ).requiresCorrectToolForDrops().strength(2).noOcclusion()));
 	RegistryObject<Block> BLOCK_ROUNDEL_1 =new RegistryObject<>(()-> new BlockRoundel(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.QUARTZ).requiresCorrectToolForDrops().strength(2).noOcclusion()));
