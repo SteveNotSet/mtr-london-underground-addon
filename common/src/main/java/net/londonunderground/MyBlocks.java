@@ -81,7 +81,6 @@ public interface MyBlocks {
 	RegistryObject<Block> SIGN_METRO =new RegistryObject<>(()-> new SignMetro(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.QUARTZ).strength(2).noOcclusion()));
 	RegistryObject<Block> SIGN_LIZZY =new RegistryObject<>(()-> new SignLizzy(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.QUARTZ).strength(2).noOcclusion()));
 	RegistryObject<Block> SIGN_UNDERGROUND =new RegistryObject<>(()-> new SignUnderground(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.QUARTZ).strength(2).noOcclusion()));
-	RegistryObject<Block> SIGN_PRIDE =new RegistryObject<>(()-> new SignPride(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.QUARTZ).strength(2).noOcclusion()));
 
 	RegistryObject<Block> MORDEN_STEPS =new RegistryObject<>(()-> new StairBlockExtends(TFL_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.METAL, MaterialColor.QUARTZ).requiresCorrectToolForDrops().strength(2).noOcclusion()));
 	RegistryObject<Block> LU_POLE =new RegistryObject<>(()-> new BlockLUPole(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.QUARTZ).requiresCorrectToolForDrops().strength(2).noOcclusion()));
