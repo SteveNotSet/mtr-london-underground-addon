@@ -208,7 +208,7 @@ public class Main {
 
 		registerBlockEntityType.accept("tunnel_darkness", MyBlockEntityTypes.DARK_TILE);
 		registerBlockEntityType.accept("pids_northern", MyBlockEntityTypes.PIDS_NORTHERN_TILE_ENTITY);
-		registerBlockEntityType.accept("tunnel_block_2_signal", MyBlockEntityTypes.TUNNEL_BLOCK_2_SIGNAL);
+		// registerBlockEntityType.accept("tunnel_block_2_signal", MyBlockEntityTypes.TUNNEL_BLOCK_2_SIGNAL);
 		registerBlockEntityType.accept("tunnel_a2_signal", MyBlockEntityTypes.TUNNEL_A2_SIGNAL);
 		registerBlockEntityType.accept("block_roundel_1", MyBlockEntityTypes.BLOCK_ROUNDEL_TILE_ENTITY);
 		registerBlockEntityType.accept("block_roundel_nle", MyBlockEntityTypes.BLOCK_ROUNDEL_NLE_TILE_ENTITY);
