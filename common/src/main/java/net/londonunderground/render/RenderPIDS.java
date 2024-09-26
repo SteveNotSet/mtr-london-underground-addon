@@ -265,7 +265,7 @@ public class RenderPIDS<T extends BlockEntityMapper> extends BlockEntityRenderer
 					final String destinationString2;
 					if (currentSchedule.currentStationIndex == route.platformIds.size() - 1) {
 						if (isCJK) {
-							destinationString2 = "終止服務";
+							destinationString2 = "终止服务";
 						} else {
 							destinationString2 = "Terminating Here";
 						}
