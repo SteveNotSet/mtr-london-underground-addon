@@ -1,6 +1,6 @@
 {
     "name": "LU - Stockwell Wall + Roundel",
-    "model": "mtrsteamloco:eyecandies/stockwell_wall_roundel/stockwell_wall_roundel.obj",
+    "model": "mtrsteamloco:eyecandies/london_underground/stockwell_wall_roundel.obj",
     "scale": [ 1.0, 1.0, 1.0 ],
     "flipUV": true
 }

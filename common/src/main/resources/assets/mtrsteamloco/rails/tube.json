@@ -1,5 +1,5 @@
 {
     "name": "LU Tunnel",
-    "model": "mtrsteamloco:rails/tube/tube.obj",
+    "model": "mtrsteamloco:rails/london_underground/tube.obj",
     "repeatInterval": 0.9
 }

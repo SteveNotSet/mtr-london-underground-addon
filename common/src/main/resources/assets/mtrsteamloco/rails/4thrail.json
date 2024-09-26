@@ -1,5 +1,5 @@
 {
     "name": "LU Tracks - 4th Rail",
-    "model": "mtrsteamloco:rails/4thrail/track_dark.obj",
+    "model": "mtrsteamloco:rails/london_underground/4thrail.obj",
     "repeatInterval": 0.9
 }

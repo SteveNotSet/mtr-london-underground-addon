@@ -1,5 +1,5 @@
 {
     "name": "LU Tracks - DLR with 3rd Rail Type A",
-    "model": "mtrsteamloco:rails/new3rdraila/new3rdraila.obj",
+    "model": "mtrsteamloco:rails/london_underground/new3rdraila.obj",
     "repeatInterval": 0.60
 }

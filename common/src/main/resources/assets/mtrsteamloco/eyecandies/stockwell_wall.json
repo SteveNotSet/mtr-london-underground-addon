@@ -1,6 +1,6 @@
 {
     "name": "LU - Stockwell Wall",
-    "model": "mtrsteamloco:eyecandies/stockwell_wall/stockwell_wall.obj",
+    "model": "mtrsteamloco:eyecandies/london_underground/stockwell_wall.obj",
     "scale": [ 1.0, 1.0, 1.0 ],
     "flipUV": true
 }

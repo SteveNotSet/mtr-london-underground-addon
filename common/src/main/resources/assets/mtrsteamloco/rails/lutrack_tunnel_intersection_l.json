@@ -1,5 +1,5 @@
 {
     "name": "LU Tunnel - Tunnel Intersection - A",
-    "model": "mtrsteamloco:rails/lutrack_tunnel_intersection_l/track.obj",
+    "model": "mtrsteamloco:rails/london_underground/lutrack_tunnel_intersection_l.obj",
     "repeatInterval": 0.9
 }
