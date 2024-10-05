@@ -32,5 +32,5 @@ jobs:
       - name: Capture release artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: MTR-LU-Xinghai-${{ steps.vars.outputs.sha_short }}-${{ matrix.minecraft }}
+          name: MTR-Lunjiao-Underground-${{ matrix.minecraft }}
           path: build/release/*-${{ matrix.minecraft }}-*.jar
