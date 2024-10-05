@@ -1,4 +1,4 @@
-# MTR London Underground Addon - a less stupid version
+# MTR Lunjiao Underground Addon - a less stupid version of MTR London Underground Addon
 
 ## Setup
 
