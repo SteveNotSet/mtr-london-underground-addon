@@ -13,7 +13,7 @@
 
 The source code of this mod is available under the MIT license. Feel free to learn from it and incorporate it in your own projects.
 
-The *MTR London Underground* Mod is originally developed by the most stupid MTRMOD developer - cherbert.
+The *MTR London Underground* Mod is originally developed by Cherbert(Chris Herbert).
 
 ## What did I modify?
 
