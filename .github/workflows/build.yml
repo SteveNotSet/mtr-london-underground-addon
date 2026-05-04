@@ -30,7 +30,7 @@ jobs:
       - name: Build ${{ matrix.minecraft }} ${{ matrix.loader }}
         run: ./gradlew build -PbuildVersion="${{ matrix.minecraft }}"
       - name: Capture release artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: MTR-Lunjiao-Underground-${{ matrix.minecraft }}
           path: build/release/*-${{ matrix.minecraft }}-*.jar
