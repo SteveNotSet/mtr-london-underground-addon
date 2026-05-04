@@ -3,15 +3,22 @@ import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
 	id "architectury-plugin" version "3.4-SNAPSHOT"
-	id "dev.architectury.loom" version "0.12.0-SNAPSHOT" apply false
+	id "dev.architectury.loom" version "1.5-SNAPSHOT" apply false
 	id "de.undercouch.download" version "4.1.2"
-	id "com.github.johnrengelman.shadow" version "7.1.0"
+	id "com.github.johnrengelman.shadow" version "8.1.1"
 }
 
-def default_minecraft_version = "1.19.2"
+def default_minecraft_version = "1.20.1"
 def minecraft_version = project.properties.containsKey("buildVersion") ? project.getProperties().get("buildVersion") : default_minecraft_version
 def minecraft_main_version = minecraft_version.split("\\.")[1] as int
 def is_1_19_3 = minecraft_version == "1.19.3" || minecraft_version == "1.19.4"
+def is_1_20 = minecraft_version == "1.20" || minecraft_version == "1.20.1"
+String mtrBaseURL = is_1_20 ? "https://storage.zbx1425.cn/mtr-artifacts/libs/" : "https://www.minecrafttransitrailway.com/libs/"
+
+// Manifold Preprocessor: 将 Minecraft 版本号转换为整数格式 (例如: 1.20.1 -> 12001)
+def minecraft_version_int = minecraft_version.split("\\.")[0] +
+        minecraft_version.split("\\.")[1].padLeft(2, '0') +
+        (minecraft_version.split("\\.").length > 2 ? minecraft_version.split("\\.")[2].padLeft(2, '0') : "00")
 
 rootProject.ext.fabric_loader_version = new JsonSlurper().parse(("https://meta.fabricmc.net/v2/versions/loader/" + minecraft_version).toURL())[0]["loader"]["version"]
 rootProject.ext.forge_version = minecraft_version + "-" + new JsonSlurper().parse(("https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json").toURL())["promos"][minecraft_version + "-latest"]
@@ -35,25 +42,33 @@ subprojects {
 		minecraft "com.mojang:minecraft:${minecraft_version}"
 		mappings loom.officialMojangMappings()
 		implementation files("../checkouts/mtr-common.jar")
+		
+		// Manifold Preprocessor for compile-time conditional compilation
+		annotationProcessor 'systems.manifold:manifold-preprocessor:2023.1.0'
+	}
+	
+	// Configure compiler args for Manifold Preprocessor
+	tasks.withType(JavaCompile) {
+		options.compilerArgs += ['-Xplugin:Manifold', '-AMC_VERSION=' + minecraft_version_int]
 	}
 }
 
 task setupLibrary() {
 	doLast {
 		download {
-			src "https://www.minecrafttransitrailway.com/libs/${rootProject.mtr_version}/MTR-common-${minecraft_version}-${rootProject.mtr_version}-dev.jar"
+			src "${mtrBaseURL}${rootProject.mtr_version}/MTR-common-${minecraft_version}-${rootProject.mtr_version}-dev.jar"
 			dest "checkouts/mtr-common.jar"
 			overwrite true
 		}
 
 		download {
-			src "https://www.minecrafttransitrailway.com/libs/${rootProject.mtr_version}/MTR-fabric-${minecraft_version}-${rootProject.mtr_version}-dev-shadow.jar"
+			src "${mtrBaseURL}${rootProject.mtr_version}/MTR-fabric-${minecraft_version}-${rootProject.mtr_version}-dev-shadow.jar"
 			dest "checkouts/mtr-fabric.jar"
 			overwrite true
 		}
 
 		download {
-			src "https://www.minecrafttransitrailway.com/libs/${rootProject.mtr_version}/MTR-forge-${minecraft_version}-${rootProject.mtr_version}-dev-shadow.jar"
+			src "${mtrBaseURL}${rootProject.mtr_version}/MTR-forge-${minecraft_version}-${rootProject.mtr_version}-dev-shadow.jar"
 			dest "checkouts/mtr-forge.jar"
 			overwrite true
 		}

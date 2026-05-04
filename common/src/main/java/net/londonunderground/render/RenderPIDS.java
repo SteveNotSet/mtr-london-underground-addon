@@ -229,7 +229,13 @@ public class RenderPIDS<T extends BlockEntityMapper> extends BlockEntityRenderer
 					if (destinationWidth > totalScaledWidth) {
 						matrices.scale(totalScaledWidth / destinationWidth, 1, 1);
 					}
+#if MC_VERSION >= "12000"
+					// 1.20+ use new drawInBatch API
+					UtilitiesClient.drawInBatch(textRenderer, text4, 0, 0, textColor, false, matrices.last().pose(), vertexConsumers, light, 190);
+#else
+					// 1.17-1.19 use old draw API
 					textRenderer.draw(matrices, text4, 0, 0, textColor);
+#endif
 				} else {
 					final Component arrivalText;
 					final int seconds = (int) ((currentSchedule.arrivalMillis - System.currentTimeMillis()) / 1000);
@@ -244,7 +250,11 @@ public class RenderPIDS<T extends BlockEntityMapper> extends BlockEntityRenderer
 
 					if (renderArrivalNumber) {
 						final FormattedCharSequence text1 = Text.literal(String.valueOf(i + 1)).setStyle(style).getVisualOrderText();
+#if MC_VERSION >= "12000"
+						UtilitiesClient.drawInBatch(textRenderer, text1, 0, 0, seconds > 0 ? textColor : firstTrainColor, false, matrices.last().pose(), vertexConsumers, light, 190);
+#else
 						textRenderer.draw(matrices, text1, 0, 0, seconds > 0 ? textColor : firstTrainColor);
+#endif
 					}
 
 					final float newDestinationMaxWidth = destinationMaxWidth - carLengthMaxWidth;
@@ -258,7 +268,11 @@ public class RenderPIDS<T extends BlockEntityMapper> extends BlockEntityRenderer
 						if (carTextWidth > carLengthMaxWidth) {
 							matrices.scale(carLengthMaxWidth / carTextWidth, 1, 1);
 						}
+#if MC_VERSION >= "12000"
+						UtilitiesClient.drawInBatch(textRenderer, text3, 0, 0, CAR_TEXT_COLOR, false, matrices.last().pose(), vertexConsumers, light, 190);
+#else
 						textRenderer.draw(matrices, text3, 0, 0, CAR_TEXT_COLOR);
+#endif
 						matrices.popPose();
 					}
 
@@ -282,7 +296,11 @@ public class RenderPIDS<T extends BlockEntityMapper> extends BlockEntityRenderer
 						matrices.scale(newDestinationMaxWidth / destinationWidth, 1, 1);
 					}
 
+#if MC_VERSION >= "12000"
+					textRenderer.drawInBatch(text4, 0, 0, seconds > 0 ? textColor : firstTrainColor, false, matrices.last().pose(), vertexConsumers, Font.DisplayMode.NORMAL, 0, light);
+#else
 					textRenderer.draw(matrices, text4, 0, 0, seconds > 0 ? textColor : firstTrainColor);
+#endif
 					matrices.popPose();
 
 					if (arrivalText != null) {
@@ -297,7 +315,11 @@ public class RenderPIDS<T extends BlockEntityMapper> extends BlockEntityRenderer
 						} else {
 							matrices.translate(totalScaledWidth - arrivalWidth, 0, 0);
 						}
+#if MC_VERSION >= "12000"
+						UtilitiesClient.drawInBatch(textRenderer, text5, 0, 0, textColor, false, matrices.last().pose(), vertexConsumers, light, 190);
+#else
 						textRenderer.draw(matrices, text5, 0, 0, textColor);
+#endif
 						matrices.popPose();
 					}
 				}
