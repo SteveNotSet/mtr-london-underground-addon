@@ -1,4 +1,13 @@
-# MTR Lunjiao Underground Addon - a less stupid version of MTR London Underground Addon
+# MTR Lunjiao Underground Addon - MTR 伦教地铁附加模组
+
+A less stupid version of MTR London Underground Addon.  
+一个没那么蠢的MTR LU Addon。
+
+## 伦教是什么？What is Lunjiao?
+
+伦教（lún jiào），是佛山市顺德区的一个地区名。佛山地铁 3 号线有同名地铁站“伦教站”。该地区有特色美食——伦教糕。
+
+伦教（lún jiào）, is a region name in Shunde district, Foshan city. Foshan Metro Line 3 has a station with the same name as "Lunjiao Station". There is a special food in this region called "Lunjiao Cake".
 
 ## Setup
 
@@ -13,7 +22,7 @@
 
 The source code of this mod is available under the MIT license. Feel free to learn from it and incorporate it in your own projects.
 
-The *MTR London Underground* Mod is originally developed by Cherbert(Chris Herbert).
+The *MTR London Underground* Mod is originally developed by Cherbert (Chris Herbert).
 
 ## What did I modify?
 
