@@ -3,6 +3,12 @@
 A less stupid version of MTR London Underground Addon.  
 一个没那么蠢的MTR LU Addon。
 
+## 关于 2.0-noSigns 分支的说明 About 2.0-noSigns Branch
+
+该分支是应星海市服务器要求，移除了所有用不到的标牌资源的版本。源码层面和 2.0 分支完全一致。
+
+This branch is for the request of Xinghai City Server. It removes all the unnecessary sign resources. The source code is exactly the same as 2.0 branch.
+
 ## 伦教是什么？What is Lunjiao?
 
 伦教（lún jiào），是佛山市顺德区的一个地区名。佛山地铁 3 号线有同名地铁站“伦教站”。该地区有特色美食——伦教糕。
