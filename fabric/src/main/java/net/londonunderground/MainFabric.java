@@ -17,6 +17,11 @@ public class MainFabric implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+#if MC_VERSION >= "12000"
+		// 1.20+ 需要先初始化创造模式物品栏
+		CreativeTabInitializer.initFabric();
+#endif
+		
 		Main.init(MainFabric::registerBlock, MainFabric::registerBlock, MainFabric::registerBlockEntityType, MainFabric::registerSoundEvent);
 		FabricRegistryUtilities.registerCommand(PanelCommand::register);
 	}
