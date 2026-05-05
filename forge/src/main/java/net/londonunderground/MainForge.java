@@ -39,6 +39,11 @@ public class MainForge {
 		BLOCK_ENTITY_TYPES.register();
 		SOUND_EVENTS.register();
 
+#if MC_VERSION >= "12000"
+		// 1.20+ 需要注册创造模式物品栏事件监听器
+		eventBus.register(ForgeUtilities.RegisterCreativeTabs.class);
+#endif
+
 		eventBus.register(MTRForgeRegistry.class);
 		RegistryUtilities.registerCommand(PanelCommand::register);
 	}
